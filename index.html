@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RapidSMP – Horror Modpack | A Minecraft Horror Experience</title>
+  <meta name="description" id="metaDesc" content="RapidSMP – Horror: a Minecraft 1.21.4 Fabric horror modpack with stalking entities, a sanity system, horror soundtrack and the Dreadlight shader. Download and survive.">
+  <meta name="theme-color" content="#0a0708">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RapidSMP – Horror Modpack">
+  <meta property="og:description" content="A Minecraft 1.21.4 Fabric horror modpack. When the fog rolls in… you'll realize you were never alone.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <link rel="icon" type="image/png" href="assets/logo-round.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Atmosphere layers -->
+  <div class="fx-fog" aria-hidden="true"></div>
+  <div class="fx-noise" aria-hidden="true"></div>
+  <div class="fx-vignette" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">RAPID<span>SMP</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#ozellikler" data-i18n="nav.features">Features</a>
+        <a href="#modlar" data-i18n="nav.mods">Mods</a>
+        <a href="#paketler" data-i18n="nav.packs">Packs</a>
+        <a href="#kurulum" data-i18n="nav.install">Install</a>
+        <a href="#sss" data-i18n="nav.faq">FAQ</a>
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Language">
+          <button data-lang="en" class="active">EN</button>
+          <button data-lang="tr">TR</button>
+        </div>
+        <a href="#download" class="btn btn-nav" data-i18n="nav.download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-moon" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <h1 class="hero-title">
+        <span class="t1">RAPID<em>SMP</em></span>
+        <span class="t2">MODPACK</span>
+      </h1>
+
+      <p class="hero-tagline" data-i18n="hero.tagline">When the fog rolls in… <span>you'll realize you were never alone.</span></p>
+
+      <div class="hero-badges">
+        <span class="badge-pill"><strong data-count="mods">0</strong> <span data-i18n="hero.mods">Mods</span></span>
+        <span class="badge-pill"><strong data-count="textures">0</strong> <span data-i18n="hero.textures">Texture Packs</span></span>
+        <span class="badge-pill"><strong data-count="shaders">0</strong> <span data-i18n="hero.shader">Shader</span></span>
+        <span class="badge-pill badge-version cf-verpill">v2.4.0 • 1.21.4 • Fabric</span>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#download" class="btn btn-blood" data-i18n="hero.ctaDownload">Download Modpack</a>
+        <a href="#modlar" class="btn btn-ghost" data-i18n="hero.ctaMods">Browse the Mods</a>
+      </div>
+
+      <p class="hero-warning" data-i18n="hero.warning">This modpack contains intense horror elements and sudden scares. Player discretion is advised.</p>
+    </div>
+    <a href="#stats" class="scroll-hint" aria-label="Scroll down">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats" id="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal">
+        <span class="stat-num" data-count-target="mods">0</span>
+        <span class="stat-label" data-i18n="stats.mods">Mods</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num" data-count-target="textures">0</span>
+        <span class="stat-label" data-i18n="stats.textures">Texture Packs</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num" data-count-target="shaders">0</span>
+        <span class="stat-label" data-i18n="stats.shader">Shader Pack</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num stat-text cf-mcver">1.21.4</span>
+        <span class="stat-label" data-i18n="stats.version">Minecraft Version</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about section" id="hakkinda">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="about.eyebrow">Welcome to the darkness</p>
+      <h2 class="section-title reveal" data-i18n="about.title">Are You Ready to Be Afraid?</h2>
+      <div class="about-grid">
+        <p class="about-text reveal" data-i18n="about.p1"></p>
+        <p class="about-text reveal" data-i18n="about.p2"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="features section section-dark" id="ozellikler">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="features.eyebrow">What awaits you</p>
+      <h2 class="section-title reveal" data-i18n="features.title">Pack Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 data-i18n="features.f1t">Entities That Hunt You</h3>
+          <p data-i18n="features.f1p"></p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 data-i18n="features.f2t">Sanity System</h3>
+          <p data-i18n="features.f2p"></p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          </div>
+          <h3 data-i18n="features.f3t">Horror Sound &amp; Music</h3>
+          <p data-i18n="features.f3p"></p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </div>
+          <h3 data-i18n="features.f4t">Dreadlight Shader</h3>
+          <p data-i18n="features.f4p"></p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-i18n="features.f5t">SMP With Friends</h3>
+          <p data-i18n="features.f5p"></p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 data-i18n="features.f6t">Runs on Anything</h3>
+          <p data-i18n="features.f6p"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MOD LIST ================= -->
+  <section class="mods section" id="modlar">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="mods.eyebrow">What's inside</p>
+      <h2 class="section-title reveal"><span data-i18n="mods.title">Mod List</span> <span class="title-count" id="modTotal"></span></h2>
+
+      <div class="mod-controls reveal">
+        <input type="search" id="modSearch" class="mod-search" data-i18n-ph="mods.search" placeholder="Search mods… (e.g. sodium, horror)" aria-label="Search mods">
+        <div class="mod-filters" id="modFilters"></div>
+      </div>
+
+      <p class="mod-count" id="modCount"></p>
+      <div class="mod-grid" id="modGrid"></div>
+      <p class="mod-empty" id="modEmpty" hidden data-i18n="mods.empty">No mods match your search.</p>
+    </div>
+  </section>
+
+  <!-- ================= TEXTURE & SHADER PACKS ================= -->
+  <section class="packs section section-dark" id="paketler">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="packs.eyebrow">Look &amp; sound</p>
+      <h2 class="section-title reveal" data-i18n="packs.title">Texture &amp; Shader Packs</h2>
+
+      <h3 class="packs-subtitle reveal"><span data-i18n="packs.texturesSub">Texture Packs</span> <span id="tpTotal"></span></h3>
+      <div class="pack-grid" id="texturePackGrid"></div>
+
+      <h3 class="packs-subtitle reveal"><span data-i18n="packs.shaderSub">Shader Pack</span> <span id="shTotal"></span></h3>
+      <div class="pack-grid pack-grid-single" id="shaderGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="gallery section" id="galeri">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="gallery.eyebrow">Frames from the dark</p>
+      <h2 class="section-title reveal" data-i18n="gallery.title">Screenshots</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <p class="gallery-note reveal" data-i18n="gallery.note">All screenshots were captured in-game with the Dreadlight shader enabled.</p>
+    </div>
+  </section>
+
+  <!-- ================= DOWNLOAD ================= -->
+  <section class="download section section-dark" id="download">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="dl.eyebrow">Get the pack</p>
+      <h2 class="section-title reveal" data-i18n="dl.title">Download the Modpack</h2>
+
+      <div class="download-card reveal">
+        <div class="dl-file">
+          <span class="dl-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+          </span>
+          <div>
+            <h3 class="dl-name">RapidSMP-Horror-2.4.0.zip</h3>
+            <div class="dl-pills">
+              <span>v2.4.0</span>
+              <span>Minecraft 1.21.4</span>
+              <span>Fabric</span>
+              <span>2.1 MB</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn-blood btn-big dl-btn" href="downloads/RapidSMP-Horror-2.4.0.zip" download
+           data-i18n="dl.button">Download RapidSMP – Horror 2.4.0</a>
+
+        <div class="vt-row">
+          <span class="vt-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            0 / 65
+          </span>
+          <p data-i18n="dl.vtText">No security vendors flagged this file as malicious on VirusTotal.</p>
+          <a href="https://www.virustotal.com/gui/file/fbdfb678e4d3eb580d6b955bcfcd6fdcc63c2c1fd8cd44f8ad65564c8e7954d4"
+             target="_blank" rel="noopener" data-i18n="dl.vtLink">View the full report</a>
+        </div>
+
+        <div class="sha-row">
+          <span>SHA-256</span>
+          <code>fbdfb678e4d3eb580d6b955bcfcd6fdcc63c2c1fd8cd44f8ad65564c8e7954d4</code>
+        </div>
+
+        <p class="dl-note" data-i18n="dl.note">After downloading, open the CurseForge app and import the zip: <strong>Minecraft → Create Custom Profile → Import</strong>. That's it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSTALL ================= -->
+  <section class="install section" id="kurulum">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="install.eyebrow">Getting started</p>
+      <h2 class="section-title reveal" data-i18n="install.title">How to Install</h2>
+
+      <div class="install-steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3 data-i18n="install.s1t">Download the Pack</h3>
+            <p data-i18n="install.s1p"></p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3 data-i18n="install.s2t">Install the CurseForge App</h3>
+            <p data-i18n="install.s2p"></p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3 data-i18n="install.s3t">Import the Zip</h3>
+            <p data-i18n="install.s3p"></p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3 data-i18n="install.s4t">Play</h3>
+            <p data-i18n="install.s4p"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="requirements reveal">
+        <h3 data-i18n="install.reqTitle">System Recommendations</h3>
+        <ul>
+          <li data-i18n="install.req1"></li>
+          <li data-i18n="install.req2"></li>
+          <li data-i18n="install.req3"></li>
+          <li data-i18n="install.req4"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq section section-dark" id="sss">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="faq.eyebrow">Questions in the dark</p>
+      <h2 class="section-title reveal" data-i18n="faq.title">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q1"></summary>
+          <p data-i18n="faq.a1"></p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q2"></summary>
+          <p data-i18n="faq.a2"></p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q3"></summary>
+          <p data-i18n="faq.a3"></p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q4"></summary>
+          <p data-i18n="faq.a4"></p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q5"></summary>
+          <p data-i18n="faq.a5"></p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q6"></summary>
+          <p data-i18n="faq.a6"></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BOTTOM CTA ================= -->
+  <section class="cta-band">
+    <div class="container reveal">
+      <h2 data-i18n="cta.title">The Darkness Is Waiting</h2>
+      <p class="cta-sub" id="ctaSub"></p>
+      <a href="downloads/RapidSMP-Horror-2.4.0.zip" download class="btn btn-blood btn-big" data-i18n="cta.button">Download Now — Free</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand">RAPID<span>SMP</span></span>
+        <p data-i18n="footer.tagline">A Minecraft horror modpack for 1.21.4 (Fabric).</p>
+      </div>
+      <div class="footer-links">
+        <a href="#download" data-i18n="footer.download">Download</a>
+        <a href="#" class="dc-link" target="_blank" rel="noopener">Discord</a>
+        <a href="#modlar" data-i18n="footer.mods">Mod List</a>
+        <a href="#kurulum" data-i18n="footer.install">Install Guide</a>
+      </div>
+      <div class="footer-note">
+        <p>© 2026 RapidSMP.</p>
+        <p data-i18n="footer.disclaimer">This site is not affiliated with Mojang Studios or Microsoft. "Minecraft" is a trademark of Mojang Studios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
