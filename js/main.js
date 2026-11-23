@@ -8,7 +8,7 @@
 
 const CONFIG = {
   discordUrl: "#",                                  // TODO: your Discord invite link
-  downloadFile: "downloads/RapidSMP-Horror-2.4.0.zip",
+  downloadFile: "downloads/RapidSMP-Horror-2.4.1.zip",
   packVersion: "2.4.0",
   mcVersion: "1.21.4",
   loader: "Fabric",
